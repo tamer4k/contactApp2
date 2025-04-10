@@ -1,4 +1,5 @@
 import { Address } from "./address.class";
+import { uuid } from 'uuidv4';
 
 export class Contact {
     public id: string;
@@ -10,7 +11,7 @@ export class Contact {
     public address?: Address;
 
     constructor(data: any) {
-        this.id = data.id ?? 'UUID';
+        this.id = data.id ?? uuid();
         this.firstName = data.firstName;
         this.lastName = data.lastName;
         this.namesufix = data.namesufix ?? undefined;

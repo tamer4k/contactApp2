@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { ContactService } from '../contact.service';
 
 @Component({
   selector: 'app-contact-list',
@@ -7,5 +8,7 @@ import { Component } from '@angular/core';
   styleUrl: './contact-list.component.scss'
 })
 export class ContactListComponent {
+   #serviceContact = inject(ContactService);
+  constructor() { }
 
 }
