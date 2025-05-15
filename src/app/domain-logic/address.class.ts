@@ -1,4 +1,4 @@
-import { uuid } from 'uuidv4';
+import { v4 as uuidv4 } from 'uuid';
 
 
 export class Address{
@@ -9,13 +9,13 @@ export class Address{
     public city: string;
     public zip: string;
 
-    constructor(data: any) {
-        this.id = data.id ?? uuid();
-        this.street = data.street;
-        this.houseNumber = data.housenumber;
-        this.houseNumberSuffix = data.housenumbersuffix ?? undefined;
-        this.city = data.city;
-        this.zip = data.zip;
-    }
+  constructor(data?: Partial<Address>) {
+    this.id = data?.id ?? uuidv4();
+    this.street = data?.street ?? '';
+    this.city = data?.city ?? '';
+    this.zip = data?.zip ?? '';
+    this.houseNumber = data?.houseNumber ?? 0;
+    this.houseNumberSuffix = data?.houseNumberSuffix;
+  }
 
 }

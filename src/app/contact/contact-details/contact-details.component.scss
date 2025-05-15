@@ -1,0 +1,52 @@
+.contact-detail-container {
+    max-width: 600px;
+    margin: 3em auto;
+    padding: 2em;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 1.5em;
+  }
+  
+  .contact-card p {
+    font-size: 18px;
+    margin: 0.5em 0;
+  }
+  
+  .contact-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2em;
+  }
+  
+  .btn {
+    padding: 0.75em 1.5em;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .btn.delete {
+    background-color: #e53935;
+    color: white;
+  }
+  
+  .btn.delete:hover {
+    background-color: #c62828;
+  }
+  
+  .btn.back {
+    background-color: #607d8b;
+    color: white;
+  }
+  
+  .btn.back:hover {
+    background-color: #455a64;
+  }

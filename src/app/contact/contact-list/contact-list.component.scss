@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body, html {
+    font-family: Arial, sans-serif;
+    height: 100%;
+  }
+  
+  header, nav, footer {
+    text-align: center;
+    padding: 1em;
+  }
+  
+  header {
+    background-color: #f88;
+  }
+  
+  nav {
+    background-color: #aef;
+  }
+  
+  footer {
+    background-color: #fca;
+  }
+  
+  .main-content {
+    display: flex;
+    padding: 1em;
+    gap: 1em;
+  }
+  
+  section {
+    flex: 2;
+    background-color: #efe;
+    padding: 1em;
+    border: 1px solid #ccc;
+  }
+  
+  section h2 {
+    background-color: #fcc;
+    padding: 0.5em;
+    margin-bottom: 1em;
+    text-align: center;
+  }
+  
+  article {
+    background-color: #ddf;
+    padding: 1em;
+    border: 1px solid #999;
+  }
+  
+  aside {
+    flex: 1;
+    background-color: #ddd;
+    padding: 1em;
+    border: 1px solid #aaa;
+  }
+
+
+
+
+
+  .contact-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1em;
+    font-size: 16px;
+  }
+  
+  .contact-table th, .contact-table td {
+    border: 1px solid #ccc;
+    padding: 0.75em;
+    text-align: left;
+  }
+  
+  .contact-table thead {
+    background-color: #f0f0f0;
+  }
+  
+  .contact-table tbody tr:hover {
+    background-color: #e0f7fa;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }

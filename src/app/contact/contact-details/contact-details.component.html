@@ -1,0 +1,18 @@
+
+<div class="contact-detail-container" >
+    <h2>Contact Details</h2>
+  
+    <div class="contact-card" *ngIf="contact">
+      <p><strong>ID:</strong> {{ contact.id }}</p>
+      <p><strong>Voornaam:</strong> {{ contact.firstName }}</p>
+      <p><strong>Achternaam:</strong> {{ contact.lastName }}</p>
+      <p><strong>Email:</strong> {{ contact.email || 'Geen e-mailadres' }}</p>
+      <p><strong>Telefoon:</strong> {{ contact.phone || 'Geen telefoonnummer' }}</p>
+    </div>
+  
+    <div class="contact-actions">
+      <button class="btn edit" (click)="editContact()">Wijzig contact</button>
+      <button class="btn delete" (click)="deleteContact()">Verwijder Contact</button>
+      <button class="btn back" (click)="goBack()">Terug</button>
+    </div>
+</div>

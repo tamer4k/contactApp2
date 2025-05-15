@@ -1,7 +1,11 @@
 import { Address } from "./address.class";
-import { uuid } from 'uuidv4';
+import { v4 as uuidv4 } from 'uuid';
 
 export class Contact {
+    
+    static id(id: any) {
+        throw new Error('Method not implemented.');
+    }
     public id: string;
     public firstName: string;
     public lastName: string;
@@ -10,15 +14,13 @@ export class Contact {
     public phone: string;
     public address?: Address;
 
-    constructor(data: any) {
-        this.id = data.id ?? uuid();
-        this.firstName = data.firstName;
-        this.lastName = data.lastName;
-        this.namesufix = data.namesufix ?? undefined;
-        this.email = data.email;
-        this.phone = data.phone;
-        if(data.address){
-            this.address = data.address;
-        }
+    constructor(data?: Partial<Contact>) {
+        this.id = data?.id ?? uuidv4();
+        this.firstName = data?.firstName ?? '';
+        this.lastName = data?.lastName ?? '';
+        this.namesufix = data?.namesufix;
+        this.email = data?.email ?? '';
+        this.phone = data?.phone ?? '';
+        this.address = data?.address ?? new Address();
     }
 }

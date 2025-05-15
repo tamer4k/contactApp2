@@ -1,1 +1,48 @@
-<p>contact-list works!</p>
+
+
+
+
+<header>
+  <h1>Header</h1>
+</header>
+
+<nav>
+  <p>Navigation</p>
+</nav>
+
+<div class="main-content">
+  <section>
+    <h2>Heading</h2>
+    <article>
+      <h2>Contact Lijst</h2>
+      <table class="contact-table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Voornaam</th>
+            <th>Achternaam</th>
+            <th>Telefoon</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let contact of contacts" (click)="goToContact(contact.id)">
+            <td>{{ contact.id }}</td>
+            <td>{{ contact.firstName }}</td>
+            <td>{{ contact.lastName }}</td>
+            <td>{{ contact.phone }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </article>
+  </section>
+
+  <aside>
+    <p>Aside content</p>
+    <button (click)="goToAddPage()" style="margin-bottom: 20px;">➕ Contact toevoegen</button>
+
+  </aside>
+</div>
+
+<footer>
+  <p>Footer</p>
+</footer>
